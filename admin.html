@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head><title>TV Join</title></head>
+  <body>
+    <h2>Connecting to TV...</h2>
+    <button onclick="join()">Join</button>
+    <button onclick="leave()">Leave</button>
+
+    <script>
+      function join() {
+        fetch('/api/admin-ping', { method: 'POST' })
+          .then(() => alert("Joined TV mode"));
+      }
+
+      function leave() {
+        fetch('/api/admin-reset', { method: 'POST' })
+          .then(() => alert("Left TV mode"));
+      }
+    </script>
+  </body>
+</html>
