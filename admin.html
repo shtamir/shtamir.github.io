@@ -11,13 +11,13 @@
         console.log(`Joining TV mode...`);
 
         fetch('/api/admin-ping', { method: 'POST' })
-          .then(() => alert("Joined TV mode"));
+          .then(() => alert("Joined TV mode 1"));
       }
 
       function leave() {
         console.log(`Leaving TV mode...`);
         fetch('/api/admin-reset', { method: 'POST' })
-          .then(() => alert("Left TV mode"));
+          .then(() => alert("Left TV mode 2"));
       }
     </script>
   </body>
