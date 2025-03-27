@@ -4,6 +4,9 @@ export default async function handler(req, res) {
     const redisUrl = process.env.UPSTASH_REDIS_REST_URL;
     const redisToken = process.env.UPSTASH_REDIS_REST_TOKEN;
   
+    console.log(`Inside status handler`);
+    console.log(`Status method: ${req.method}`);
+
     const response = await fetch(`${redisUrl}/get/admin_present`, {
       headers: {
         Authorization: `Bearer ${redisToken}`,
