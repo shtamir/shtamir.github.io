@@ -8,11 +8,14 @@
 
     <script>
       function join() {
+        console.log(`Joining TV mode...`);
+
         fetch('/api/admin-ping', { method: 'POST' })
           .then(() => alert("Joined TV mode"));
       }
 
       function leave() {
+        console.log(`Leaving TV mode...`);
         fetch('/api/admin-reset', { method: 'POST' })
           .then(() => alert("Left TV mode"));
       }
